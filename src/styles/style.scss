@@ -5,7 +5,7 @@
 
 
 header {
-  background-color: #859398;
+  background-color: #333;
   border-bottom: 1px solid;
   display: flex;
   width: 100%;
@@ -14,14 +14,13 @@ header {
 }
 
 header a {
-  
+  height: 30px;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 header a:hover {
   text-decoration: underline;
-  color: whitesmoke;
 }
 
 ul, #today {
@@ -31,7 +30,13 @@ ul, #today {
 }  
 
 li, #today{
-  padding: 10px 30px;
+  padding: 10px 20px;
+}
+
+.active {
+  color: whitesmoke;
+  background-color: #25bd8d;
+  border-radius: 2px;
 }
 
 main {
@@ -41,16 +46,36 @@ main {
 
 
 .locations {
+  height: 90vh;
   background-color: #eee;
   position: relative;
 
   img {
-      width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__select{
       position: absolute;
-      top: 40px;
-      right: 50%;
+      top: 10%;
+      left: 15%;
   }
+}
+
+#city-selector{
+  width:150px; 
+  font-size: 20px;
+  }
+
+.weather-info {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  background: white;
+  padding: 10px;
+  border: 2px groove #859398;
+  border-radius: 5px;
+  min-height: 200px;
+  min-width: 350px;
 }
