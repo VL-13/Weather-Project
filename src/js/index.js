@@ -20,7 +20,7 @@ function renderCurrentCity(cityKey) {
 }
 
 function renderWeatherInfo (data) {
-    const {name, main, wind} = data;
+    const {name, main, wind, sys} = data;
     let target = document.querySelector('.locations');
 
     const infobox = document.createElement('div');
@@ -29,13 +29,16 @@ function renderWeatherInfo (data) {
     console.log(data);
 
     const cityName = document.createElement('div');
-    cityName.innerText = `${name}`
-
-    const weatherDescription = document.createElement('div');
-    weatherDescription.innerText =`${data.weather[0].description}`
+    cityName.innerText = `${name}, ${sys.country}`
+    cityName.setAttribute('class', 'city-name')
 
     const temperature = document.createElement('div');
-    temperature.innerText = `Temperature : ${main.temp.toFixed(0)}°C`
+    temperature.innerText = `${main.temp.toFixed(0)}°C`
+    temperature.setAttribute('class', 'temperature')
+
+    const weatherDescription = document.createElement('div');
+    weatherDescription.innerHTML =`${data.weather[0].description}\n <hr>`
+    weatherDescription.setAttribute('class', 'description')
 
     const feelTemp = document.createElement('div');
     feelTemp.innerText = `Feels like: ${main.feels_like.toFixed(0)}°C`
@@ -49,13 +52,20 @@ function renderWeatherInfo (data) {
     const humidity = document.createElement('div');
     humidity.innerText = `Humidity: ${data.main.humidity} %`
 
+    /*const weatherIcon = document.createElement('img');
+    const icon = data.weather[0].icon
+    const imgSrc = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+    weatherIcon.setAttribute('class', 'weather-icon')
+    weatherIcon.src = imgSrc;*/
+
     infobox.append(cityName)
-    infobox.append(weatherDescription)
     infobox.append(temperature)
+    infobox.append(weatherDescription)
     infobox.append(feelTemp)
     infobox.append(windSpeed)
     infobox.append(pressure)
     infobox.append(humidity)
+   // infobox.append(weatherIcon)
     target.append(infobox);
 }
 
