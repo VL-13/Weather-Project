@@ -67,4 +67,4 @@ export const cities =  {
     url: "https://cdn-image.departures.com/sites/default/files/1576002985/header-tokyo-japan-LUXETOKYO1219.jpg",
     name: "Tokyo"
   },
-  }
+}

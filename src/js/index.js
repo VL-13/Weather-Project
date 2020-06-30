@@ -1,7 +1,6 @@
-import '../styles/style.scss';
 import { getByCity } from './api.js';
 import { cities } from '../data/backgroundPhotos.js';
-import { routes } from './routes.js';
+
 
 let n =  new Date();
 let y = n.getFullYear();
@@ -72,7 +71,6 @@ function renderWeatherInfo (data) {
 function createDropdown(cities) {
     let select = document.createElement('select');
     let target = document.querySelector('.locations');
-    if(!target) return;
     select.setAttribute('name', 'city-selector');
     select.setAttribute('id', 'city-selector');
     select.setAttribute('class', 'locations__select');
@@ -114,14 +112,3 @@ if(selectedCity) {
     } 
 } 
 
-function initNavigation() {
-    let route = null;
-    for(let item in routes){
-        if(location.pathname.includes(item)) {
-            route = item;
-        }
-    }
-    document.getElementById(route).classList.add('active')
-}
-
-initNavigation()
