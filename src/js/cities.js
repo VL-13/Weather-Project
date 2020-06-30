@@ -18,12 +18,12 @@ function renderForecastInfo(data) {
     box.append(cityBox);
 }
 
-
-
-let arrayOfPromises = [];
-
+let selectedCity = localStorage.getItem('selectedCity');
 for(let city in cities) {
-    arrayOfPromises.push(getByCity(cities[city].name))
+    arrayOfPromises.push(getByCity(cities[city].name));
+    if (city === selectedCity) {
+        arrayOfPromises.pop(getByCity(cities[city].name));
+    }
 }
 
 Promise.all(arrayOfPromises).then(data => data.map(item => renderForecastInfo(item)))
