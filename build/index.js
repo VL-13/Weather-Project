@@ -102,11 +102,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!***********************!*\
   !*** ./src/js/api.js ***!
   \***********************/
-/*! exports provided: getByCity */
+/*! exports provided: getByCity, getForecast */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getByCity\", function() { return getByCity; });\nconst API_KEY = '0e534b9ba5862d894024f3dc71035201';\r\nfunction getByCity(city) {\r\n    return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&&appid=${API_KEY}`).then(rsp => rsp.json())\r\n}\n\n//# sourceURL=webpack:///./src/js/api.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getByCity\", function() { return getByCity; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getForecast\", function() { return getForecast; });\nconst API_KEY = '0e534b9ba5862d894024f3dc71035201';\r\nfunction getByCity(city) {\r\n    return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&&appid=${API_KEY}`).then(rsp => rsp.json())\r\n}\r\n\r\nfunction getForecast(city) {\r\n    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&&appid=${API_KEY}&cnt=7`).then(rsp => rsp.json())\r\n}\n\n//# sourceURL=webpack:///./src/js/api.js?");
 
 /***/ }),
 
