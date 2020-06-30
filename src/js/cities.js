@@ -5,14 +5,21 @@ import { cities } from '../data/backgroundPhotos.js';
 function renderForecastInfo(data) {
     const box = document.querySelector('.cities-list');
     const cityBox = document.createElement('div');
-    const cityName = document.createElement('span');
-    cityBox.append(cityName)
-    cityName.innerText = `${data.name}`;
-    cityBox.innerText = `${data.main.temp.toFixed(0)}°C`;
+    cityBox.setAttribute('class', 'city-box-info')
+    
+    cityBox.innerText = `${data.name} ${data.main.temp.toFixed(0)}°C`;
+    const weatherIcon = document.createElement('img');
+    const icon = data.weather[0].icon
+    const imgSrc = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+    weatherIcon.setAttribute('class', 'weather-icon')
+    weatherIcon.src = imgSrc;
+
+    cityBox.append(weatherIcon);
     box.append(cityBox);
+    console.log(data);
 }
 
-console.log(data);
+
 
 let arrayOfPromises = [];
 

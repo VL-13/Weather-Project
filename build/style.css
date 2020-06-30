@@ -104,3 +104,15 @@ footer a {
 footer a:hover {
   text-decoration: underline; }
 
+.city-box-info {
+  border: 1px solid;
+  border-radius: 3px;
+  width: auto;
+  padding: 10px;
+  margin: 10px 20px;
+  font-size: 36px; }
+
+.weather-icon {
+  width: 90px;
+  height: 90px; }
+
