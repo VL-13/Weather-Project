@@ -16,7 +16,6 @@ function renderForecastInfo(data) {
 
     cityBox.append(weatherIcon);
     box.append(cityBox);
-    console.log(data);
 }
 
 
