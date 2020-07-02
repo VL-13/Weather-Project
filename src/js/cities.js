@@ -7,14 +7,14 @@ function renderForecastInfo(data) {
     const cityBox = document.createElement('div');
     cityBox.setAttribute('class', 'city-box-info')
     
-    cityBox.innerText = `${data.name} ${data.main.temp.toFixed(0)}°C`;
-    const weatherIcon = document.createElement('img');
+    cityBox.innerHTML = `<p> ${data.name} </p> <p> ${data.main.temp.toFixed(0)}°C </p>`;
+    /*const weatherIcon = document.createElement('img');
     const icon = data.weather[0].icon
     const imgSrc = `http://openweathermap.org/img/wn/${icon}@2x.png`;
     weatherIcon.setAttribute('class', 'weather-icon')
     weatherIcon.src = imgSrc;
 
-    cityBox.append(weatherIcon);
+    cityBox.append(weatherIcon);*/
     box.append(cityBox);
 }
 

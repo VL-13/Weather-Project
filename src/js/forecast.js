@@ -35,18 +35,21 @@ if(selectedCity) {
 
                 const forecastInfo = document.createElement('div');
                 forecastInfo.setAttribute('class', 'forecast-info');
-                
                 const temperature = document.createElement('div');
+                temperature.setAttribute('class', 'info-line');
                 const description = document.createElement('div');
                 const windSpeed = document.createElement('div');
+                windSpeed.setAttribute('class', 'info-line');
                 const pressure = document.createElement('div');
+                pressure.setAttribute('class', 'info-line');
                 const humidity = document.createElement('div');
+                humidity.setAttribute('class', 'info-line');
 
-                temperature.innerText = `Temperature: ${item.main.temp.toFixed(0)} °C`;
-                description.innerText = item.weather[0].description;
-                windSpeed.innerText = `Wind speed: ${item.wind.speed} km/h `;
-                pressure.innerText = `Atmospheric pressure: ${item.main.pressure} hPa`
-                humidity.innerText = `Humidity: ${item.main.humidity} %`
+                temperature.innerHTML = `<p> Temperature:</p> <p>${item.main.temp.toFixed(0)} °C</p>`;
+                description.innerHTML = item.weather[0].description;
+                windSpeed.innerHTML = `<p> Wind speed:</p> <p>${item.wind.speed} km/h</p>`;
+                pressure.innerHTML = `<p> Atmospheric pressure:</p> <p>${item.main.pressure} hPa</p>`
+                humidity.innerHTML = `<p> Humidity:</p> <p>${item.main.humidity} %</p>`
                 const iconSource =document.createElement('div');
                 const weatherIcon = document.createElement('img');
                 const icon = item.weather[0].icon
@@ -63,11 +66,8 @@ if(selectedCity) {
                 forecastInfo.append(windSpeed);
                 forecastInfo.append(pressure);
                 forecastInfo.append(humidity);
-                }
-            
+                } 
         });
-
     }
-
 });
 }

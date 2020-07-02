@@ -104,36 +104,51 @@ footer a {
 footer a:hover {
   text-decoration: underline; }
 
-.city-box-info {
-  border: 1px solid;
-  border-radius: 3px;
+.cities-list {
   width: auto;
-  padding: 10px;
-  margin: 10px 20px;
-  font-size: 36px; }
+  padding: 0 20%; }
+
+.city-box-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 18px; }
+
+.city-box-info:nth-child(odd) {
+  background: #f0f0f0; }
 
 .weather-icon {
-  width: 90px;
-  height: 90px; }
+  width: 100px;
+  height: 100px; }
 
 .selected-city {
   text-align: center;
   padding: 20px; }
 
+.info-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
 .forecast-infobox {
   display: flex;
-  padding: 20px;
+  align-items: center;
   margin: 10px;
   flex-flow: row wrap;
   border: 1px solid black;
-  border-radius: 5px; }
+  border-radius: 3px; }
 
 .forecast-info {
-  width: 20%;
-  padding: 20px;
   display: flex;
   flex-flow: column wrap;
-  align-items: center;
-  margin: 20px 0;
-  font-size: 14px; }
+  text-align: center;
+  width: 20%;
+  padding: 20px;
+  font-size: 14px;
+  border-radius: 3px; }
+
+.forecast-info:nth-child(odd) {
+  background: #fafafa; }
 
