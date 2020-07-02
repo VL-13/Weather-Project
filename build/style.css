@@ -116,3 +116,24 @@ footer a:hover {
   width: 90px;
   height: 90px; }
 
+.selected-city {
+  text-align: center;
+  padding: 20px; }
+
+.forecast-infobox {
+  display: flex;
+  padding: 20px;
+  margin: 10px;
+  flex-flow: row wrap;
+  border: 1px solid black;
+  border-radius: 5px; }
+
+.forecast-info {
+  width: 20%;
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 14px; }
+

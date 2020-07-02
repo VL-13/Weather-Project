@@ -4,5 +4,5 @@ export function getByCity(city) {
 }
 
 export function getForecast(city) {
-    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&&appid=${API_KEY}&cnt=7`).then(rsp => rsp.json())
+    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&&appid=${API_KEY}`).then(rsp => rsp.json())
 }

@@ -1,16 +1,6 @@
 import { getByCity } from './api.js';
 import { cities } from '../data/backgroundPhotos.js';
 
-
-let n =  new Date();
-let y = n.getFullYear();
-let m = n.getMonth() + 1;
-let d = n.getDate();
-let mm = m < 10 ? '0' + m : m;
-let dd = d < 10 ? '0' + d : d;
-document.getElementById("today").innerHTML = "WeatherApp |  " + dd + "/" + mm + "/" + y;
-today.style.color = 'white';
-
 function renderCurrentCity(cityKey) {
     let cityImage = cities[cityKey].url;
     let image = document.getElementById('image-placeholder');
@@ -25,7 +15,7 @@ function renderWeatherInfo (data) {
     const infobox = document.createElement('div');
     infobox.classList.add('weather-info');
 
-    console.log(data);
+    //console.log(data);
 
     const cityName = document.createElement('div');
     cityName.innerText = `${name}, ${sys.country}`
