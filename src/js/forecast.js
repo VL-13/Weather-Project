@@ -63,7 +63,6 @@ if(selectedCity) {
                 forecastInfo.append(windSpeed);
                 forecastInfo.append(pressure);
                 forecastInfo.append(humidity);
-                //console.log(item);
                 }
             
         });
