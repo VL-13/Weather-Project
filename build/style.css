@@ -33,10 +33,6 @@ li, #today {
   background-color: #25bd8d;
   border-radius: 2px; }
 
-main {
-  background-color: #bdc3c7;
-  background-image: linear-gradient(to bottom right, #bdc3c7, #ffffff); }
-
 .locations {
   height: 90vh;
   background-color: #eee;
@@ -179,11 +175,10 @@ footer a:hover {
   50% {
     border-color: transparent; } }
 
-.about-main {
+.about-box {
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: lightgreen;
   height: 200px;
   width: 200px;
   transform: translate(-50%, -50%);
@@ -201,7 +196,7 @@ footer a:hover {
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   border-radius: 50%;
-  background-color: white;
+  background-color: #25bd8d;
   animation: ball 0.3s infinite alternate ease;
   -webkit-animation: ball 0.3s infinite alternate ease; }
 
