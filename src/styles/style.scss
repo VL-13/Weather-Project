@@ -158,6 +158,9 @@ footer a:hover {
   align-items: center;
   justify-content: space-between;
 }
+.info-line:nth-child(even) {
+	background: rgb(240, 240, 240);
+  }
 
 .forecast-infobox {
   display: flex;
