@@ -30,16 +30,20 @@ function renderWeatherInfo (data) {
     weatherDescription.setAttribute('class', 'description')
 
     const feelTemp = document.createElement('div');
-    feelTemp.innerText = `Feels like: ${main.feels_like.toFixed(0)}°C`
+    feelTemp.setAttribute('class', 'info-line');
+    feelTemp.innerHTML = `<p>Feels like:</p> <p>${main.feels_like.toFixed(0)}°C </p>`
     
     const windSpeed = document.createElement('div');
-    windSpeed.innerText = `Wind speed: ${wind.speed} km/h`
+    windSpeed.setAttribute('class', 'info-line');
+    windSpeed.innerHTML = `<p> Wind speed:</p> <p>${wind.speed} km/h<p>`
 
     const pressure = document.createElement('div');
-    pressure.innerText = `Atmospheric pressure: ${data.main.pressure} hPa`
+    pressure.setAttribute('class', 'info-line');
+    pressure.innerHTML = `<p>Atmospheric pressure:<p> <p>${data.main.pressure} hPa<p>`
 
     const humidity = document.createElement('div');
-    humidity.innerText = `Humidity: ${data.main.humidity} %`
+    humidity.setAttribute('class', 'info-line');
+    humidity.innerHTML = `<p>Humidity:<p> <p>${data.main.humidity} %<p>`
 
     /*const weatherIcon = document.createElement('img');
     const icon = data.weather[0].icon
